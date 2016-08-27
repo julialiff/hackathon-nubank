@@ -3,6 +3,8 @@
 * TEMA: Aproximando o jovem do mundo financeiro
 
 * Proposta de valor: consultoria gratuita que traz credibilidade ao consultor.
+* Atividade-chave: unir investidores e consultores 
+
 
 ```    
     PERSONAS
