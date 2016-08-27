@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @consultant.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @consultant.email %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @consultant.photo %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @consultant.state %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @consultant.city %>
+</p>
+
+<p>
+  <strong>Occupation:</strong>
+  <%= @consultant.occupation %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @consultant.username %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @consultant.rating %>
+</p>
+
+<p>
+  <strong>Knowledge:</strong>
+  <%= @consultant.knowledge %>
+</p>
+
+<%= link_to 'Edit', edit_consultant_path(@consultant) %> |
+<%= link_to 'Back', consultants_path %>
