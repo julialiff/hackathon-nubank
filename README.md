@@ -1,24 +1,17 @@
-# README
+# Hackathon NuBank
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* TEMA: Aproximando o jovem do mundo financeiro
 
-Things you may want to cover:
+* Proposta de valor: consultoria gratuita que traz credibilidade ao consultor.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```    
+    PERSONAS
+        Abra: investidor
+              pouco dinheiro
+              sem disposição
+              sem tempo
+            
+        Kadabra: consultor
+                 tem conhecimento
+                 não ter certificação oficial
+                 quer dinheiro extra
