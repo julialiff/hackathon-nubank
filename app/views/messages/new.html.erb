@@ -1,0 +1,11 @@
+<h1>Mensagens com <%= @consultant.name %></h1>
+<div class="row"><div class="col-md-6">aaaaa</div><div class="col-md-6">bbbbbb</div></div>
+<%= @messages.first.name %>
+
+
+
+<h1>New Message</h1>
+
+<%= render 'form', message: @message %>
+
+<%= link_to 'Back', messages_path %>
