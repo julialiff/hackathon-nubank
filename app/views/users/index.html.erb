@@ -1,7 +1,9 @@
 <%@user=User.first%>
 <%@ads=Ad.where(user_id: 1)%>
+<%= render 'dashboard_user' %>
 <p id="notice"><%= notice %></p>
-<!--<h1>Users</h1>
+
+<h1>Users</h1>
 
 <table>
   <thead>
@@ -39,38 +41,4 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %> -->
-
-
-<div id="userdash" class="row">
-    <div id="perfil" class="col-md-3">
-        
-        <div id="foto-row" class="row">
-            
-            <div id="foto-col" class="col-md-6">
-                <img src="" class="fotoperfil">
-                <p>lalallaa</p>l
-            </div>
-        </div>
-        
-        <div id="nome-row" class="row">
-            <p class="nome"> Nome:  <%= @user.name %> </p>
-            
-        </div>
-    </div>
-    
-      
-    
-    <div class="col-md-9" id="Anuncios">
-      <button type="button" id="btnCriarAnun" class="btn btn-info">Criar Anúncio</button>
-      <h3>Meus anúncios</h2>
-      <% @ads.each do |ad| %>
-        <row>
-          <col>
-            <p><%= ad.content %> </p><br>
-            <p><%= ad.user.name %> </p>
-          </col>  
-        </row> 
-    <%end%>
-    </div>
-</div>
+<%= link_to 'New User', new_user_path %>
