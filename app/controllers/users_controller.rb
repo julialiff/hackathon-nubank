@@ -8,13 +8,12 @@ class UsersController < ApplicationController
   end
 
 
-  def dashboard
-    
-  end
+  
   
   # GET /users/1
   # GET /users/1.json
   def show
+    
   end
 
   # GET /users/new
