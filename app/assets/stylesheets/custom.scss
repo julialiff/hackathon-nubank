@@ -2,5 +2,30 @@
 @import "bootstrap";
 
 #card{
-  backgound-color: #DDD;
+  background-color: #DDD;
+  margin:5px;
+  border-radius: 25px;
+  float: left;
+  box-shadow: 0px 10px 5px #888888;
+  cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0px;
+}
+
+#cardsbody{
+  margin-left:0%;
+}
+
+#card-photo{
+  border-radius: 50%;
+  width:50px;
+  margin:10px;
+}
+
+#card-talk{
+  margin:10px;
+}
+
+.row{
+    margin-left: 150px;
 }
