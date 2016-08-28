@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :cmessages
   resources :messages
   get 'sessions/new'
- root "static_page#home"
+  root "static_page#home"
   resources :ads
   resources :consultants
   resources :users
@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get    '/logini',   to: 'sessions#newi'
   post   '/logini',   to: 'sessions#createi'
   get   '/loginc',   to: 'sessions#newc'
-  post   '/loginc',   to: 'sessions#createc' 
+  post   '/loginc',   to: 'sessions#createc'
   delete '/logout',  to: 'sessions#destroy'
   get    '/signupi',   to: 'sessions#newi'
 

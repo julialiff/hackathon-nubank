@@ -26,7 +26,7 @@
 	          	<% if logged_in? %>
 	            	<li><a href="#">Dashboard</a></li>
 	            <% else %>
-	            	<li><a href="#">Home</a></li>
+	            	<li><%= link_to 'Home', root_path %></li>
 	            <% end %>
 
 	            <li><a href="#about">Sobre nós</a></li>
