@@ -19,23 +19,23 @@
         <td><%= consultant.username %></td>
         <td><%= consultant.rating %></td>
         <td><%= consultant.knowledge %></td>
-        <td><%= consultant.password_digested %></td>
+        <td><%= consultant.password_digest %></td>
         <td><%= link_to 'Show', consultant %></td>
         <td><%= link_to 'Edit', edit_consultant_path(consultant) %></td>
         <td><%= link_to 'Destroy', consultant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
 =======
 <div class="row">
-  
+
     <div class="col-md-6">
       <h3 id="title1">Precisam de ajuda</h3>
       <% @users1.each do |user| %>
         <row>
           <p class="nome"> Nome:  <%= user.name %> </p>
-        </row> 
+        </row>
       <% end %>
     </div>
-  
+
   <div class="col-md-6">
     <h3>Acompanhar investidores</h3>
     <% @users2.each do |user| %>
@@ -45,9 +45,9 @@
 >>>>>>> master
     <% end %>
   </div>
-  
+
 </div>
-  
+
 
 <br>
 

@@ -2,15 +2,15 @@
 <html>
   <head>
     <title>Alakazam</title>
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"> 
-    <%= csrf_meta_tags %>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %>
   </head>
 
   <body>
-	  <nav class="navbar navbar-default navbar-fixed-top quick">
+	  <nav class="navbar monange navbar-fixed-top quick">
 	      <div class="container">
 	        <div class="navbar-header">
 	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -31,7 +31,7 @@
 
 	            <li><a href="#about">Sobre nós</a></li>
 	            <li><a href="#contact">Contato</a></li>
-	            
+
 	          </ul>
 	          <ul class="nav navbar-nav navbar-right">
 			      <% if logged_in? %>
