@@ -1,42 +1,33 @@
+<%@consultant=Consultant.first%>
+<%@users1=User.first(3)%>
+<%@users2=User.last(1)%>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Consultants</h1>
+<h1>Consultants Dashboard</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Photo</th>
-      <th>State</th>
-      <th>City</th>
-      <th>Occupation</th>
-      <th>Username</th>
-      <th>Rating</th>
-      <th>Knowedge</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @consultants.each do |consultant| %>
-      <tr>
-        <td><%= consultant.name %></td>
-        <td><%= consultant.email %></td>
-        <td><%= consultant.photo %></td>
-        <td><%= consultant.state %></td>
-        <td><%= consultant.city %></td>
-        <td><%= consultant.occupation %></td>
-        <td><%= consultant.username %></td>
-        <td><%= consultant.rating %></td>
-        <td><%= consultant.knowledge %></td>
-        <td><%= link_to 'Show', consultant %></td>
-        <td><%= link_to 'Edit', edit_consultant_path(consultant) %></td>
-        <td><%= link_to 'Destroy', consultant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<div class="row">
+  
+    <div class="col-md-6">
+      <h3 id="title1">Precisam de ajuda</h3>
+      <% @users1.each do |user| %>
+        <row>
+          <p class="nome"> Nome:  <%= user.name %> </p>
+        </row> 
+      <% end %>
+    </div>
+  
+  <div class="col-md-6">
+    <h3>Acompanhar investidores</h3>
+    <% @users2.each do |user| %>
+      <row>
+        <p class="nome"> Nome:  <%= user.name %> </p>
+      </row>
     <% end %>
-  </tbody>
-</table>
+  </div>
+  
+</div>
+  
 
 <br>
 
