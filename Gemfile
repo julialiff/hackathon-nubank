@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
-
+gem 'wdm', '>= 0.1.0'
+gem 'bcrypt',         '3.1.11'
 gem 'bootstrap-sass', '3.3.6'
 gem 'awesome_print'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
