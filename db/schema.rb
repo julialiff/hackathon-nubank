@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160828002808) do
+ActiveRecord::Schema.define(version: 20160828020858) do
 
   create_table "ads", force: :cascade do |t|
     t.string   "type"
@@ -18,6 +18,16 @@ ActiveRecord::Schema.define(version: 20160828002808) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_ads_on_user_id"
+  end
+
+  create_table "cmessages", force: :cascade do |t|
+    t.string   "message"
+    t.integer  "user_id"
+    t.integer  "consultant_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["consultant_id"], name: "index_cmessages_on_consultant_id"
+    t.index ["user_id"], name: "index_cmessages_on_user_id"
   end
 
   create_table "consultants", force: :cascade do |t|

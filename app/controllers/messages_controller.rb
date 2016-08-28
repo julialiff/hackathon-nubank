@@ -17,7 +17,11 @@ class MessagesController < ApplicationController
     @consultant = Consultant.find(1)
     @user = User.find(1)
     # @messages = Message.all.where()
-    @messages = Message.select('id, (SELECT name FROM users WHERE  id = user_id) AS name').where(user_id: 1)
+    # @messages = Message.select('id, created_at, message (SELECT name FROM users WHERE  id = user_id) AS name').where(user_id: 1, consultant_id:1)
+    @messages = Message.select('id, created_at, message, user_id, consultant_id, (SELECT name FROM users WHERE  id = user_id) AS name').where('user_id = ? AND consultant_id = ?', 1, 1)
+    @messages2 = Cmessage.select('id, created_at, message, user_id, consultant_id, (SELECT name FROM consultants WHERE  id = consultant_id) AS name').where('user_id = ? AND consultant_id = ?', 1, 1)
+    @messages = @messages + @messages2
+    # @messages = Message.select('id, (SELECT name FROM users WHERE  id = user_id) AS name').where(user_id: 1)
     @message = Message.new
   end
 

@@ -1,32 +1,44 @@
-<%= form_for(message) do |f| %>
-  <% if message.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(message.errors.count, "error") %> prohibited this message from being saved:</h2>
+<!-- <%#= form_for(message) do |f| %>
+  <%# if message.errors.any? %>
+   <div id="error_explanation">
+      <h2><%#= pluralize(message.errors.count, "error") %> prohibited this message from being saved:</h2>
 
       <ul>
-      <% message.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+      <%# message.errors.full_messages.each do |message| %>
+        <li><%#= message %></li>
+      <% #end %>
       </ul>
     </div>
-  <% end %>
+  <% #end %>
 
   <div class="field">
-    <%= f.label :message %>
-    <%= f.text_field :message %>
+    <%#= f.label :message %>
+    <%#= f.text_field :message %>
   </div>
 
   <div class="field">
-    <%= f.label :user_id %>
-    <%= f.text_field :user_id %>
+    <%#= f.label :user_id %>
+    <%#= f.text_field :user_id %>
   </div>
 
   <div class="field">
-    <%= f.label :consultant_id %>
-    <%= f.text_field :consultant_id %>
+    <%#= f.label :consultant_id %>
+    <%#= f.text_field :consultant_id %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%#= f.submit %>
   </div>
-<% end %>
+<%# end %> -->
+
+<div class="row">
+  <%= form_for(message) do |f| %>
+  <div class="col-md-10">
+      <%= f.label :message %>
+      <%= f.text_field :message, :size=>"80" %>
+    </div>
+  <div class="col-md-2">
+      <%= f.submit 'Enviar' %>
+    </div>
+  <% end %>
+</div>

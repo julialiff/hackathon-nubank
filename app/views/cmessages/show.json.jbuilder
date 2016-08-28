@@ -1,0 +1,1 @@
+json.partial! "cmessages/cmessage", cmessage: @cmessage
