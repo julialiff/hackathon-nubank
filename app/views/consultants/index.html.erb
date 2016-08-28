@@ -1,65 +1,72 @@
-<%@consultant=Consultant.first%>
+<% if logged_in?  %>
+<% @consultant = @current_consultant %>
+<% end %>
 <%@users1=User.first(3)%>
 <%@users2=User.last(1)%>
 
-<p id="notice"><%= notice %></p>
+<div class="row" style="margin-top:30px">
+  <div class="col-md-2" id="perfil" >
+    <row>
+      <h3 id="title">Seu Perfil</h3>
+      <div class="col-md-12" style="text-align: center;">
+        <img src="http://ppgbiotecufam.net/images/default_user.jpg" id="card-photo" style="width:100px;" /><br />
+        <%= @current_consultant.name %><br />
+        <%= @current_consultant.city %> - <%= @current_consultant.state %><br />
+        <%= @current_consultant.occupation %>
+      </div>
 
-
-
-<div class="row">
-    <div class="col-md-2" id="perfil" >
-      <row>
-        <h3 id="title">Perfil</h3>
       </row>
     </div>
     <div class="col-md-9">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 >Consultants Dashboard</h1>
-        </div>
-      </div>
       <div class="col-md-12">
         <div class="row">
-          <div class="col-md-6">
+
+          <div class="col-md-6" style="border-right: 1px solid #000">
             <h3 id="title">Precisam de ajuda</h3>
-            <% @users1.each do |user| %>
-              <row>
-                <div class="row">
-                  <div class="col-md-12" div="cardsbody">
-                    <div class="row">
-                    <!-- tananan.each do |t|-->
-                      <div id="card">
-                        <img src="http://ppgbiotecufam.net/images/default_user.jpg" id="card-photo" />
-                        <p class="nome"><b>Nome:  <%= user.name %> </b></b></p><br />
-                        São Paulo - SP<br />
-                        Programador<br />
-                        <button class="btn btn-primary" id="card-talk"><spam class="glyphicon glyphicon-envelope">  Conversar</spam>
-                      </div>
-                    <!-- end -->
+            <div class="row">
+              <% @users1.each do |user| %>
+                <div id="card">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <img src="http://ppgbiotecufam.net/images/default_user.jpg" id="card-photo" />
+                    </div>
+                    <div class="col-md-10">
+                      <p style="margin-top:20px;"><b><%= user.name %></b><br />
+                      São Paulo - SP<br />
+                      Programador<br />
+                      <button class="btn btn-primary" id="card-talk"><spam class="glyphicon glyphicon-envelope">  Conversar</spam></button>
+                      </p>
                     </div>
                   </div>
                 </div>
-                </button>
-              </row> 
-            <% end %>
+              <% end %>
+            </div>
           </div>
+
+          <div class="verticalLine"></div>
           <div class="col-md-6">
             <h3 id="title">Acompanhar investidores</h3>
+            <div class="row">
               <% @users2.each do |user| %>
-                <row>
-                  <p class="nome"> Nome:  <%= user.name %> </p>
-                </row>
+                <div id="card">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <img src="http://ppgbiotecufam.net/images/default_user.jpg" id="card-photo" />
+                    </div>
+                    <div class="col-md-10">
+                      <p style="margin-top:20px;"><b><%= user.name %></b><br />
+                      São Paulo - SP<br />
+                      Programador<br />
+                      <button class="btn btn-primary" id="card-talk"><spam class="glyphicon glyphicon-envelope">  Conversar</spam></button>
+                      </p>
+                    </div>
+                  </div>
+                </div>
               <% end %>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    
-  
-  
 </div>
-  
-
-<br>
-
-<%= link_to 'New Consultant', new_consultant_path %>
+<%#= link_to 'New Consultant', new_consultant_path %>
