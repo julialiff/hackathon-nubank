@@ -3,17 +3,36 @@
 
 #card{
   background-color: #DDD;
-  margin:10px;
+<<<<<<< HEAD
+  margin:5px;
   border-radius: 25px;
   float: left;
   box-shadow: 0px 10px 5px #888888;
   cursor: pointer;
     transition: all 0.3s ease;
     padding: 0px;
+=======
+  margin:10px;
+  border-radius: 25px;
 }
 
 #cardsbody{
   margin-left:10%;
+}
+
+#card-photo{
+  border-radius: 50%;
+  width:50px;
+  margin:10px;
+}
+
+#card-talk{
+  margin:10px;
+>>>>>>> master
+}
+
+#cardsbody{
+  margin-left:0%;
 }
 
 #card-photo{

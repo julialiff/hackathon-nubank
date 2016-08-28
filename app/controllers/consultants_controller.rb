@@ -69,6 +69,6 @@ class ConsultantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def consultant_params
-      params.require(:consultant).permit(:name, :email, :photo, :state, :city, :occupation, :username, :rating, :knowledge)
+      params.require(:consultant).permit(:name, :email, :photo, :state, :city, :occupation, :username, :rating, :knowledge, :password)
     end
 end
