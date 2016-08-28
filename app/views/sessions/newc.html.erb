@@ -1,0 +1,24 @@
+<% provide(:title, "Log in") %>
+<h1 class="text-center pqn quick">Login</h1>
+<p>
+  <%= flash[:error] unless flash[:error].blank? %>
+</p>
+<div class="row text-center quick">
+  <div class="col-md-6 col-md-offset-3 loginform">
+      <% if logged_in? %>
+      Você já está logado.
+      <% else %>
+        <%= form_for(:session, url: loginc_path) do |f| %>
+
+          <%= f.email_field :email, class: 'form-control', placeholder: 'email'%>
+
+          <%= f.password_field :password, class: 'form-control', placeholder: 'senha' %>
+          <br>
+          <%= f.submit "Entrar", class: "btn btn-primary" %>
+        <% end %>
+        <p>Novo usuário? <% link_to "Cadastre-se!", signupi_path %></p>
+      <% end %>
+
+      
+    </div>
+</div>  

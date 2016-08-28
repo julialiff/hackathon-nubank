@@ -1,17 +1,35 @@
 class SessionsController < ApplicationController
   def new
   end
-
-  def create
+  def createi
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
-      # Log the user in and redirect to the user's show page.
+      log_in user
+      redirect_to root_path
     else
       # Create an error message.
-      render 'new'
+      flash.now[:error] = 'Email ou senha incorretos.'
+      render 'newi'
     end
   end
-
-  def destroy
+  def createc
+    user = Consultant.find_by(email: params[:session][:email].downcase)
+    if user && user.authenticate(params[:session][:password])
+      log_inc user
+      redirect_to root_path
+    else
+      # Create an error message.
+      flash.now[:error] = 'Email ou senha incorretos.'
+      render 'newi'
+    end
   end
+  def destroy
+    log_out
+    redirect_to root_url
+  end
+   private
+
+    def user_params
+      params.require(:user).permit(:email, :password)
+    end
 end
