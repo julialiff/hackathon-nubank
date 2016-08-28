@@ -1,13 +1,52 @@
-
-
-#title1 {
-   border-top-style: dotted;
-    border-right-style: solid;
-    border-bottom-style: dotted;
-    border-left-style: solid;
+h1{
+    /*text-align: right;*/
+    margin-left: 100px;
 }
 
-.ridge {
-border-style: ridge;
+#title{
+  text-align: center;
+  
+}
+
+#perfil{
+    background-color: #DCDCDC;
+    /*float:left;*/
+    height: 100%;
+    margin-left: 50px;
+    border-radius: 15px;
+}
+
+body{
+    padding-top: 50px;
+}
+
+.col-md-6{
+    background-color: #F5F5F5;
+    border-radius: 15px;
+    margin: 0px;
+}
+
+.starter-template{
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.bloco-item {
+    width: 15%;
+    margin-left: 2.5%
+    ;
+    margin-right: 2.5%;
     
+    height: 40%;
+    margin-top: 2.5%;
+    
+    background-color: white;
+    
+    float: left;
+    
+    box-shadow: 0px 10px 5px #888888;
+    
+    cursor: pointer;
+    
+    transition: all 0.3s ease;
 }
