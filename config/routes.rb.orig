@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   get 'sessions/new'
 
   get 'login/consultant'
@@ -7,7 +8,9 @@ Rails.application.routes.draw do
 
   get 'static_page/home'
 
+=======
   resources :cmessages
+>>>>>>> master
   resources :messages
   get 'sessions/new'
  root "static_page#home"
@@ -15,10 +18,16 @@ Rails.application.routes.draw do
   resources :consultants
   resources :users
 
+<<<<<<< HEAD
   get    '/logini',   to: 'sessions#newi'
   post   '/logini',   to: 'sessions#createi'
   get   '/loginc',   to: 'sessions#newc'
   post   '/loginc',   to: 'sessions#createc' 
+=======
+  get    '/logini',   to: 'sessions#new'
+  get    '/loginc',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+>>>>>>> master
   delete '/logout',  to: 'sessions#destroy'
   get    '/signupi',   to: 'sessions#newi'
 

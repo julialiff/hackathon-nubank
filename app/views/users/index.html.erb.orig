@@ -1,0 +1,81 @@
+<<<<<<< HEAD
+<%@user=User.first%>
+<%@ads=Ad.where(user_id: 1)%>
+=======
+<%= render 'dashboard_user' %>
+
+>>>>>>> master
+<p id="notice"><%= notice %></p>
+<!--<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Photo</th>
+      <th>State</th>
+      <th>City</th>
+      <th>Occupation</th>
+      <th>Username</th>
+      <th>Rating</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.photo %></td>
+        <td><%= user.state %></td>
+        <td><%= user.city %></td>
+        <td><%= user.occupation %></td>
+        <td><%= user.username %></td>
+        <td><%= user.rating %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %> -->
+
+
+<div id="userdash" class="row">
+    <div id="perfil" class="col-md-3">
+        
+        <div id="foto-row" class="row">
+            
+            <div id="foto-col" class="col-md-6">
+                <img src="" class="fotoperfil">
+                <p>lalallaa</p>l
+            </div>
+        </div>
+        
+        <div id="nome-row" class="row">
+            <p class="nome"> Nome:  <%= @user.name %> </p>
+            
+        </div>
+    </div>
+    
+      
+    
+    <div class="col-md-9" id="Anuncios">
+      <button type="button" id="btnCriarAnun" class="btn btn-info">Criar Anúncio</button>
+      <h3>Meus anúncios</h2>
+      <% @ads.each do |ad| %>
+        <row>
+          <col>
+            <p><%= ad.content %> </p><br>
+            <p><%= ad.user.name %> </p>
+          </col>  
+        </row> 
+    <%end%>
+    </div>
+</div>

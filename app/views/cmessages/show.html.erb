@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @cmessage.message %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @cmessage.user %>
+</p>
+
+<p>
+  <strong>Consultant:</strong>
+  <%= @cmessage.consultant %>
+</p>
+
+<%= link_to 'Edit', edit_cmessage_path(@cmessage) %> |
+<%= link_to 'Back', cmessages_path %>

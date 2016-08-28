@@ -1,2 +1,22 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#card{
+  background-color: #DDD;
+  margin:10px;
+  border-radius: 25px;
+}
+
+#cardsbody{
+  margin-left:10%;
+}
+
+#card-photo{
+  border-radius: 50%;
+  width:50px;
+  margin:10px;
+}
+
+#card-talk{
+  margin:10px;
+}

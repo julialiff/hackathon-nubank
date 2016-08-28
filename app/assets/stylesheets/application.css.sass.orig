@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+<<<<<<< HEAD:app/assets/stylesheets/application.css.sass
+
+/* allows bootstrap use */
+=======
+>>>>>>> master:app/assets/stylesheets/application.css.sass
+@import "bootstrap-sprockets"
+@import "bootstrap"
