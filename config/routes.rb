@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   resources :consultants
   resources :users
 
-  get    '/login',   to: 'sessions#new'
+  get    '/logini',   to: 'sessions#new'
+  get    '/loginc',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
