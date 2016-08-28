@@ -16,12 +16,10 @@
     <%= f.text_field :content %>
   </div>
 
-  <div class="field">
-    <%= f.label :user_id %>
-    <%= f.text_field :user_id %>
-  </div>
-
   <div class="actions">
-    <%= f.submit %>
+    <button class="btn btn-primary" id="card-talk">
+      <spam class="glyphicon glyphicon-envelope"> 
+        <%= f.submit 'Criar'%>
+        </spam></button>
   </div>
 <% end %>

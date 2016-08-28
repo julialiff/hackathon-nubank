@@ -1,0 +1,12 @@
+#adcard{
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+  margin:10px;
+  border-radius: 10px;
+  cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0px;
+  width:200;
+	height:200;
+}
+
