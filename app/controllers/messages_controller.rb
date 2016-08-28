@@ -17,7 +17,7 @@ class MessagesController < ApplicationController
     @consultant = Consultant.find(1)
     @user = User.find(1)
     # @messages = Message.all.where()
-    @messages = Message.select('id, (SELECT name FROM users WHERE  id = user_id) AS name').where(user_id: 1)
+    #@messages = Message.select('id, (SELECT name FROM users WHERE  id = user_id) AS name').where(user_id: 1)
     @message = Message.new
   end
 

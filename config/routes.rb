@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  get 'static_page/home'
+
   resources :messages
   get 'sessions/new'
-
+ root "static_page#home"
   resources :ads
   resources :consultants
   resources :users
