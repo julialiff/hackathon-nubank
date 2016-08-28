@@ -1,0 +1,1 @@
+json.array! @cmessages, partial: 'cmessages/cmessage', as: :cmessage

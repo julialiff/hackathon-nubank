@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   resources :cmessages
+=======
+  get 'static_page/home'
+
+>>>>>>> master
   resources :messages
   get 'sessions/new'
  root "static_page#home"

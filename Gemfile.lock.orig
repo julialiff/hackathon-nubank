@@ -39,7 +39,11 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.1)
+<<<<<<< HEAD
+    autoprefixer-rails (6.4.0.3)
+=======
     autoprefixer-rails (6.3.6)
+>>>>>>> master
       execjs
     awesome_print (1.7.0)
     bootstrap-sass (3.3.6)

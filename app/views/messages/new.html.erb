@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <div class="row">
+      <div class="col-md-8">
+
+      </div>
+      <h3>Mensagens com <%= @consultant.name %></h3>
+      <hr />
+      <% @messages.each do |message| %>
+        <b><%= message.name %></b> - <%= message.created_at.strftime("%d/%m/%Y às %H:%M") %> <br/>
+        <%= message.message %><br />
+      <% end %>
+    </div>
+    <div class="row">
+      <%= render 'form', message: @message %>
+    </div>
+
+  </div>
+  <div class="col-md-2"></div>
+</div>
+
+<%= link_to 'Back', messages_path %>
